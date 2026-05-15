@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#ffffff" />
+<title>콘텐츠 챌린지</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  html, body {
+    margin: 0; padding: 0;
+    background: #18181B;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+  #stage {
+    width: 100vw; height: 100vh;
+    height: 100dvh;
+    display: grid; place-items: center;
+    overflow: hidden;
+  }
+  #root {
+    width: 390px;
+    height: 844px;
+    border-radius: 36px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4), 0 8px 20px rgba(0,0,0,0.2);
+    background: white;
+    position: relative;
+  }
+  @media (max-width: 480px), (max-height: 880px) {
+    #root {
+      width: 100vw; height: 100vh; height: 100dvh;
+      border-radius: 0; box-shadow: none;
+    }
+  }
+  /* Splash while scripts load */
+  #splash {
+    position: absolute; inset: 0;
+    display: grid; place-items: center;
+    background: white; color: #71717A;
+    font-size: 13px;
+    z-index: 1;
+  }
+  #splash .logo {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: #18181B; color: white;
+    display: grid; place-items: center;
+    font-weight: 700; font-size: 18px;
+    margin-bottom: 12px;
+    letter-spacing: -0.04em;
+  }
+  #splash .col { display: flex; flex-direction: column; align-items: center; }
+</style>
+</head>
+<body>
+
+<div id="stage">
+  <div id="root">
+    <div id="splash">
+      <div class="col">
+        <div class="logo">C8</div>
+        <div>준비 중…</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Supabase JS client -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+
+<!-- React + Babel -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<!-- App scripts (order matters) -->
+<script src="supabase-config.js"></script>
+<script src="supabase-api.js"></script>
+<script src="helpers-live.js"></script>
+<script type="text/babel" src="components.jsx"></script>
+<script type="text/babel" src="app-live-participant.jsx"></script>
+<script type="text/babel" src="app-live-admin.jsx"></script>
+<script type="text/babel" src="app-live.jsx"></script>
+<script type="text/babel" src="app-live-mount.jsx"></script>
+
+</body>
+</html>
