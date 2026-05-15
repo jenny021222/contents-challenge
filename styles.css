@@ -39,9 +39,17 @@
   flex-direction: column;
 }
 
+/* On mobile / smaller screens, fill the parent (#root) instead of fixed 390횞844 */
+@media (max-width: 480px), (max-height: 880px) {
+  .m-frame {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .m-frame * { box-sizing: border-box; }
 
-/* Default SVG icon size — prevents oversized icons on mobile where parent has flex/percent sizing */
+/* Default SVG icon size �� prevents oversized icons on mobile where parent has flex/percent sizing */
 .m-frame svg:not([width]) {
   width: 18px;
   height: 18px;
