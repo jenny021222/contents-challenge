@@ -41,6 +41,13 @@
 
 .m-frame * { box-sizing: border-box; }
 
+/* Default SVG icon size — prevents oversized icons on mobile where parent has flex/percent sizing */
+.m-frame svg:not([width]) {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 /* iOS status bar */
 .statusbar {
   height: 44px;
