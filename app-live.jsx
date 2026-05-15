@@ -97,7 +97,7 @@ function Entry({ onParticipant, onAdmin }) {
       <StatusBar />
       <div className="scroll" style={{ paddingTop: 40, paddingBottom: 32, display: 'flex', flexDirection: 'column' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 28 }}>
-          <div style={{ width: 36, height: 36, borderRadius: 10, background: 'var(--ink)', color: 'white', display: 'grid', placeItems: 'center', fontWeight: 700, fontSize: 16, letterSpacing: '-0.04em' }}>C8</div>
+          <div style={{ width: 36, height: 36, borderRadius: 10, background: 'var(--ink)', color: 'white', display: 'grid', placeItems: 'center', fontSize: 18 }}>🔥</div>
           <div style={{ fontSize: 15, fontWeight: 600 }}>콘텐츠 챌린지</div>
         </div>
 
