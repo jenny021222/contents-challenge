@@ -73,18 +73,9 @@ const Icon = {
   ),
 };
 
-// Status bar (iOS-y)
-function StatusBar({ time = '9:41' }) {
-  return (
-    <div className="statusbar">
-      <span className="statusbar-time">{time}</span>
-      <div className="statusbar-icons">
-        <svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="6" width="3" height="5" rx="0.5"/><rect x="5" y="3" width="3" height="8" rx="0.5"/><rect x="10" y="0" width="3" height="11" rx="0.5"/></svg>
-        <svg width="15" height="11" viewBox="0 0 15 11" fill="currentColor"><path d="M7.5 2.5C9.6 2.5 11.6 3.3 13.2 4.7l1.2-1.3C12.5 1.7 10.1.7 7.5.7S2.5 1.7.6 3.4l1.2 1.3C3.4 3.3 5.4 2.5 7.5 2.5zM2.6 5.2l1.2 1.3C4.9 5.5 6.2 5 7.5 5s2.6.5 3.7 1.5l1.2-1.3C11 3.9 9.3 3.2 7.5 3.2S4 3.9 2.6 5.2zm2.4 2.5l1.2 1.3c.3-.3.8-.5 1.3-.5s1 .2 1.3.5l1.2-1.3c-.7-.6-1.6-1-2.5-1s-1.8.4-2.5 1z"/></svg>
-        <svg width="24" height="11" viewBox="0 0 24 11" fill="none"><rect x="0.5" y="0.5" width="21" height="10" rx="2.5" stroke="currentColor" opacity="0.4"/><rect x="2" y="2" width="17" height="7" rx="1.5" fill="currentColor"/><rect x="22" y="3.5" width="1.5" height="4" rx="0.5" fill="currentColor" opacity="0.4"/></svg>
-      </div>
-    </div>
-  );
+// Status bar (iOS-y) — hidden on the deployed web app since the phone's real status bar is visible.
+function StatusBar() {
+  return null;
 }
 
 // Bottom nav
